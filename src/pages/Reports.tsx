@@ -32,27 +32,8 @@ import {
 import LoadingSpinner from '../components/LoadingSpinner'
 import { useAuthStore } from '../stores/authStore'
 
-// Dynamic API base URL with enhanced logging
-const getApiBaseUrl = () => {
-  const protocol = window.location.protocol;
-  const hostname = window.location.hostname;
-  
-  console.log('🌐 Current hostname:', hostname);
-  console.log('🔒 Current protocol:', protocol);
-  
-  if (hostname === 'localhost' || hostname === '127.0.0.1') {
-    const url = 'http://localhost:3001/api';
-    console.log('📍 Using localhost API URL:', url);
-    return url;
-  }
-  
-  const url = `${protocol}//${hostname}:3001/api`;
-  console.log('📍 Using network API URL:', url);
-  return url;
-};
-
-const API_BASE_URL = getApiBaseUrl();
-console.log('🔗 Final Reports API Base URL:', API_BASE_URL);
+// Use Vite environment variable for API base URL
+const API_BASE_URL = import.meta.env.VITE_API_URL;
 
 const COLORS = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042', '#8884D8', '#82CA9D']
 

@@ -3,29 +3,9 @@ import { useAuthStore } from '../stores/authStore'
 import toast from 'react-hot-toast'
 
 // Dynamic API base URL function
+// Use Vite environment variable for API base URL
 const getApiBaseUrl = () => {
-  // Use environment variable for production API URL
-  const productionApiUrl = import.meta.env.VITE_API_URL;
-  
-  if (productionApiUrl) {
-    return productionApiUrl;
-  }
-  
-  // For Vercel deployment, use relative path since API and frontend are on same domain
-  if (window.location.hostname.includes('vercel.app')) {
-    return '/api';
-  }
-  
-  const protocol = window.location.protocol;
-  const hostname = window.location.hostname;
-  
-  // If accessing via localhost, use localhost for API
-  if (hostname === 'localhost' || hostname === '127.0.0.1') {
-    return 'http://localhost:3001/api';
-  }
-  
-  // If accessing via network IP, use the same IP for API
-  return `${protocol}//${hostname}:3001/api`;
+  return import.meta.env.VITE_API_URL;
 };
 
 // Create axios instance
@@ -36,8 +16,6 @@ const api: AxiosInstance = axios.create({
     'Content-Type': 'application/json',
   },
 })
-
-console.log('🔗 API Base URL:', getApiBaseUrl());
 
 // Request interceptor to add auth token
 api.interceptors.request.use(
