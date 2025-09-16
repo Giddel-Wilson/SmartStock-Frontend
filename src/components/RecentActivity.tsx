@@ -1,6 +1,6 @@
 import { formatDistanceToNow } from 'date-fns'
 import clsx from 'clsx'
-import { InventoryLog } from '../../../shared/types'
+import { InventoryLog } from '../../shared/types'
 
 interface RecentActivityProps {
   movements: InventoryLog[]

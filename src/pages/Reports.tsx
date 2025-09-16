@@ -28,7 +28,7 @@ import {
   InventoryMovementReport, 
   ReportFilter,
   Category 
-} from '../../../shared/types'
+} from '../../shared/types'
 import LoadingSpinner from '../components/LoadingSpinner'
 import { useAuthStore } from '../stores/authStore'
 

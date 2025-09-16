@@ -10,7 +10,7 @@ import {
   UserCircleIcon,
 } from '@heroicons/react/24/outline'
 import { usersAPI, departmentsAPI } from '../lib/api'
-import { User, Department } from '../../../shared/types'
+import { User, Department } from '../../shared/types'
 
 
 export default function Users() {

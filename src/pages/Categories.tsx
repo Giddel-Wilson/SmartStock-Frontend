@@ -8,7 +8,7 @@ import {
   TrashIcon,
 } from '@heroicons/react/24/outline'
 import { categoriesAPI } from '../lib/api'
-import { Category } from '../../../shared/types'
+import { Category } from '../../shared/types'
 import toast from 'react-hot-toast'
 
 interface CategoryForm {

@@ -8,7 +8,7 @@ import {
   TrashIcon,
 } from '@heroicons/react/24/outline'
 import { departmentsAPI } from '../lib/api'
-import { Department } from '../../../shared/types'
+import { Department } from '../../shared/types'
 
 import toast from 'react-hot-toast'
 

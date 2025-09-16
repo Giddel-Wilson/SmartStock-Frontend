@@ -14,7 +14,7 @@ import {
   ClockIcon,
 } from '@heroicons/react/24/outline'
 import { usersAPI } from '../lib/api'
-import { User } from '../../../shared/types'
+import { User } from '../../shared/types'
 
 import toast from 'react-hot-toast'
 

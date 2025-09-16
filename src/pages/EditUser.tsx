@@ -11,7 +11,7 @@ import {
   ShieldCheckIcon,
 } from '@heroicons/react/24/outline'
 import { usersAPI, departmentsAPI } from '../lib/api'
-import { Department } from '../../../shared/types'
+import { Department } from '../../shared/types'
 
 import toast from 'react-hot-toast'
 
